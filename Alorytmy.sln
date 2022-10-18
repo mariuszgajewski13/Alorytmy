@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alorytmy-11.10.2022", "Alorytmy-11.10.2022\Alorytmy-11.10.2022.csproj", "{298CAA53-A223-4619-8100-E3139EAACC4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorytmy-18.10.2022", "Algorytmy-18.10.2022\Algorytmy-18.10.2022.csproj", "{AADE2693-4EE9-40EC-ADB1-2CEA2FBC77B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{298CAA53-A223-4619-8100-E3139EAACC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298CAA53-A223-4619-8100-E3139EAACC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298CAA53-A223-4619-8100-E3139EAACC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298CAA53-A223-4619-8100-E3139EAACC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADE2693-4EE9-40EC-ADB1-2CEA2FBC77B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADE2693-4EE9-40EC-ADB1-2CEA2FBC77B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADE2693-4EE9-40EC-ADB1-2CEA2FBC77B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADE2693-4EE9-40EC-ADB1-2CEA2FBC77B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F623B10-2C7E-449E-BC14-9DC31083DBC4}
+	EndGlobalSection
+EndGlobal
