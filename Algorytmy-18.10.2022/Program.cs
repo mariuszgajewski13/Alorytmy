@@ -4,13 +4,21 @@
     {
         Console.WriteLine(Repeat("#", 5));
         Console.WriteLine(RepeatRec("#", 4));
-        Console.WriteLine(String.Join(',', Reminder(9)));
+
+        int[] waluty = {1, 2, 5 };
+        Console.WriteLine(String.Join(',', Reminder(9, waluty)));
         Console.WriteLine(Fib(4));
         Console.WriteLine(QuickFib(44));
 
         int[] tab = { 1, 4, 3, 6 };
         BubbleSort(tab);
         Console.WriteLine(String.Join(',', tab));
+
+        double[] v = { 12, 1.4, 2 };
+        Console.WriteLine(SumRec(v, 0, v.Length));
+
+        long[] mem = new long[50];
+        Console.WriteLine(FibMemArr(44, mem));
     }
 
     public static string Repeat(string symbol, int n)
@@ -30,32 +38,23 @@
     //Zaimplementuj postać rekurencyjną funkcję obliczającej sumę elementów tablicy
     public static double SumRec(double[] arr, int start, int end)
     {
-        throw new NotImplementedException();
+        if (end <= 0)
+            return 0;
+        return (SumRec(arr, 0, end - 1) + arr[end - 1]);
     }
 
-    //Przerobić na dowolny system monetarny np.1, 2, 5, 10, 20, .. //pętla
-    public static int[] Reminder(int amount)
+    //Przerobić na dowolny system monetarny np.1, 2, 5, 10, 20, .. //pętla -- DONE
+    public static int[] Reminder(int amount, int[] system)
     {
-        //nominały monet: 1, 2 i 5
-        int[] result = new int[3];
-        if (amount / 5 > 0)
+        int[] result = new int[system.Length];
+        for(int i = system.Length-1; i >= 0; i--)
         {
-            result[2] = amount / 5;
-            amount -= result[2] *5;
+            if (amount / system[i] > 0)
+            {
+                result[i] = amount / system[i];
+                amount -= result[i] * system[i];
+            }
         }
-
-        if (amount / 2 > 0)
-        {
-            result[1] = amount / 2;
-            amount -= result[1] * 2;
-        }
-
-        if (amount / 1 > 0)
-        {
-            result[0] = amount / 1;
-            amount -= result[0] * 1;
-        }
-
         return result;
     }
 
@@ -74,6 +73,18 @@
             mem[n - 1] = FibMem(n - 1, mem);
         if (!mem.ContainsKey(n - 2))
             mem[n - 2] = FibMem(n - 2, mem);
+
+        return mem[n - 1] + mem[n - 2];
+    }
+
+    public static long FibMemArr(int n, long[] mem)
+    {
+        if (n < 2) return 1;
+
+        if (!mem.Contains(n - 1))
+            mem[n - 1] = FibMemArr(n - 1, mem);
+        if (!mem.Contains(n - 2))
+            mem[n - 2] = FibMemArr(n - 2, mem);
 
         return mem[n - 1] + mem[n - 2];
     }
